@@ -8,12 +8,13 @@ const errorsCustomMessage = (errors) => {
 }
 
 module.exports = {
-    apiResponse: (code, status, message, data) => {
+    apiResponse: (code, status, message, data, pagination) => {
         const result = {};
         result.code = code || StatusCodes.OK;
         result.status = status || 'OK';
         result.message = message;
         result.data = data;
+        result.pagination = pagination;
 
         return result;
     },
