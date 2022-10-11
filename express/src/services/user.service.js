@@ -35,7 +35,7 @@ module.exports = {
 
             return apiResponse(status.OK, 'OK', 'Users retrieved successfully.',
                 { users },
-                { page, limit, totalRows, totalPages }
+                { page, limit, offset, totalRows, totalPages }
             );
         } catch (e) {
             throw apiResponse(e.code || status.INTERNAL_SERVER_ERROR, e.status || 'INTERNAL_SERVER_ERROR', e.message);
